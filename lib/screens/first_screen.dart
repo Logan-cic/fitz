@@ -1,3 +1,4 @@
+import 'package:fitz/screens/metodos_login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -25,18 +26,18 @@ class _FirstScreenState extends State<FirstScreen> {
           Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
-                  child: Text(
-            "FITZ", 
-            style: GoogleFonts.workSans(
-              textStyle: TextStyle(
-                color: Colors.white,
-                fontSize: 32.0,
-                fontStyle: FontStyle.normal,
-                fontWeight: FontWeight.w800,
-                letterSpacing: 1.5,
-              )
-            ),
-          ),)),
+                child: Text(
+                  "FITZ",
+                  style: GoogleFonts.workSans(
+                      textStyle: TextStyle(
+                    color: Colors.white,
+                    fontSize: 32.0,
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 1.5,
+                  )),
+                ),
+              )),
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -57,12 +58,11 @@ class _FirstScreenState extends State<FirstScreen> {
                 style: GoogleFonts.workSans(
                   textStyle: TextStyle(
                     color: Colors.white,
-                    fontSize: 40, 
-                    fontWeight: FontWeight.w600, 
+                    fontSize: 40,
+                    fontWeight: FontWeight.w600,
                     fontStyle: FontStyle.normal,
-                    letterSpacing:
-                        1.2, 
-                    height: 1.2, 
+                    letterSpacing: 1.2,
+                    height: 1.2,
                   ),
                 ),
               ),
@@ -91,7 +91,10 @@ class _FirstScreenState extends State<FirstScreen> {
                 width: double.infinity,
                 height: 50,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (_) => const MetodosLogin()));
+                  },
                   style: ButtonStyle(
                     backgroundColor:
                         MaterialStateProperty.all<Color>(Color(0xFFC7E52F)),
