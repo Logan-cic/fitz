@@ -1,4 +1,4 @@
-import 'package:fitz/screens/home_screen.dart';
+import 'package:fitz/screens/first_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     Future.delayed(const Duration(seconds: 4), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (_) => const HomeScreen()
+        builder: (_) => const FirstScreen()
       ));
     });
   }

@@ -1,3 +1,4 @@
+import 'package:fitz/screens/first_screen.dart';
 import 'package:fitz/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
