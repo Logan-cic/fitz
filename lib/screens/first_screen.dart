@@ -57,12 +57,12 @@ class _FirstScreenState extends State<FirstScreen> {
                 style: GoogleFonts.workSans(
                   textStyle: TextStyle(
                     color: Colors.white,
-                    fontSize: 40, // Tamanho da fonte
-                    fontWeight: FontWeight.w600, // Peso da fonte
+                    fontSize: 40, 
+                    fontWeight: FontWeight.w600, 
                     fontStyle: FontStyle.normal,
                     letterSpacing:
-                        1.2, // Espaçamento entre caracteres (opcional)
-                    height: 1.2, // Espaçamento entre linhas (opcional)
+                        1.2, 
+                    height: 1.2, 
                   ),
                 ),
               ),
