@@ -1,6 +1,7 @@
 import 'package:fitz/screens/first_screen.dart';
 import 'package:fitz/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,6 +18,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        textTheme: GoogleFonts.workSansTextTheme(), // Defina a fonte padrão aqui
+      ),
       home: SplashScreen(),
     );
   }

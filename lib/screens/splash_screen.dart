@@ -1,6 +1,7 @@
 import 'package:fitz/screens/first_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -40,15 +41,19 @@ class _SplashScreenState extends State<SplashScreen>
       decoration: const BoxDecoration(
         color: Color(0xFFC7E52F)
       ),
-      child: const Column(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             "FITZ", 
-            style: TextStyle(
-              fontSize: 80,
-              color: Colors.black,
-              fontWeight: FontWeight.w700,
+            style: GoogleFonts.workSans(
+              textStyle: TextStyle(
+                color: Colors.black,
+                fontSize: 64.0,
+                fontStyle: FontStyle.normal,
+                fontWeight: FontWeight.w900,
+                letterSpacing: 1.5,
+              )
             ),
           ),
         ],
