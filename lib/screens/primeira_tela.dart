@@ -12,11 +12,14 @@ class PrimeiraTela extends StatefulWidget {
 class _PrimeiraTela extends State<PrimeiraTela> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         body: Stack(
           children: [
             Container(
+              width: size.width,
+              height: size.height,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/images/image1.jpg"),
@@ -24,21 +27,6 @@ class _PrimeiraTela extends State<PrimeiraTela> {
                 ),
               ),
             ),
-            Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Container(
-                  child: Text(
-                    "FITZ",
-                    style: GoogleFonts.workSans(
-                        textStyle: TextStyle(
-                      color: Colors.white,
-                      fontSize: 32.0,
-                      fontStyle: FontStyle.normal,
-                      fontWeight: FontWeight.w800,
-                      letterSpacing: 1.5,
-                    )),
-                  ),
-                )),
             Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -51,9 +39,36 @@ class _PrimeiraTela extends State<PrimeiraTela> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 488),
-              child: Container(
+            Column(
+              children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        width: size.width * 0.08,
+                      ),
+                      Container(
+                          height: size.height * 0.08,
+                      child: Center(
+                        child: Text(
+                          "FITZ",
+                          style: GoogleFonts.workSans(
+                              textStyle: TextStyle(
+                            color: Colors.white,
+                            fontSize: 32.0,
+                            fontStyle: FontStyle.normal,
+                            fontWeight: FontWeight.w800,
+                            letterSpacing: 1.5,
+                          )),
+                        ),
+                      ),
+                    ),
+                  ],
+                  ),
+                SizedBox(
+                  height: size.height * 0.49,
+                ),
+                Container(
                 child: Text(
                   "O próximo passo para uma vida saudável",
                   style: GoogleFonts.workSans(
@@ -68,10 +83,11 @@ class _PrimeiraTela extends State<PrimeiraTela> {
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 630),
-              child: Container(
+              SizedBox(
+                height: size.height * 0.01,
+              ),
+
+            Container(
                 child: Text(
                   "Transforme-se, conquiste seu melhor eu e viva com mais energia. Comece sua jornada fitness hoje!",
                   style: GoogleFonts.workSans(
@@ -84,11 +100,11 @@ class _PrimeiraTela extends State<PrimeiraTela> {
                   ),
                 ),
               ),
-            ),
+              SizedBox(
+                height: size.height * 0.03
+              ),
             Center(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 700),
-                child: Container(
+              child:  Container(
                   width: double.infinity,
                   height: 50,
                   child: ElevatedButton(
@@ -116,7 +132,9 @@ class _PrimeiraTela extends State<PrimeiraTela> {
                   ),
                 ),
               ),
-            )
+              ],
+            ),
+            
           ],
         ),
       ),
