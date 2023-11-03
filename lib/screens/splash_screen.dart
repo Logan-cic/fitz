@@ -1,4 +1,4 @@
-import 'package:fitz/screens/first_screen.dart';
+import 'package:fitz/screens/primeira_tela.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     Future.delayed(const Duration(seconds: 4), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (_) => const FirstScreen()
+        builder: (_) => PrimeiraTela()
       ));
     });
   }

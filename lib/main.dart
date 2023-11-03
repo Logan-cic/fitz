@@ -1,5 +1,3 @@
-import 'package:fitz/screens/first_screen.dart';
-import 'package:fitz/screens/metodos_login.dart';
 import 'package:fitz/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,8 +18,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        textTheme: GoogleFonts.workSansTextTheme(), // Defina a fonte padrão aqui
+        textTheme: GoogleFonts.workSansTextTheme(),
       ),
+      debugShowCheckedModeBanner: false,
       home: SplashScreen(),
     );
   }

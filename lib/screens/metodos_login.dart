@@ -130,7 +130,7 @@ class _MetodosLoginState extends State<MetodosLogin> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              textAlign: TextAlign.center, // Para justificar o texto ao centro
+              textAlign: TextAlign.center, 
             ),
           ),
           Center(
@@ -147,7 +147,7 @@ class _MetodosLoginState extends State<MetodosLogin> {
                           width: double.infinity,
                           child: ElevatedButton.icon(
                             onPressed: () {
-                              // Ação a ser realizada ao pressionar o botão
+                              
                             },
                             icon: Icon(
                               iconesParaOsBotoes(data['method']),
