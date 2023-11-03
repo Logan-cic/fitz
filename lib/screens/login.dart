@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PaginaDeLogin extends StatefulWidget {
+  const PaginaDeLogin({super.key});
+
+
   @override
+  // ignore: library_private_types_in_public_api
   _PaginaDeLoginState createState() => _PaginaDeLoginState();
 }
 
@@ -22,61 +26,43 @@ class _PaginaDeLoginState extends State<PaginaDeLogin> {
         backgroundColor: Colors.black,
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Container(
-                  child: Text(
-                    "FITZ",
-                    style: GoogleFonts.workSans(
-                      textStyle: TextStyle(
-                        color: Colors.white,
-                        fontSize: 32.0,
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 1.5,
-                      ),
-                    ),
+                Text(
+                  "FITZ",
+                  style: GoogleFonts.workSans(textStyle: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 32.0,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: 1.5),
                   ),
                 ),
-                SizedBox(
-                  height: 30,
-                ),
-                Container(
-                  child: Text(
-                    "Acessar conta",
-                    style: GoogleFonts.workSans(
-                      textStyle: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24.0,
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 1.5,
-                      ),
-                    ),
+                const SizedBox(height: 30),
+                Text(
+                  "Acessar conta",
+                  style: GoogleFonts.workSans( textStyle: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 24.0,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: 1.5),
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  child: Text(
-                    "Crie ou acesse sua conta na plataforma utilizando e-mail ou senha.",
-                    style: GoogleFonts.workSans(
-                      textStyle: TextStyle(
-                        color: Color(0xFFB2B2B2),
-                        fontSize: 14.0,
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: 1.5,
-                      ),
-                    ),
+                const SizedBox(height: 10),
+                Text(
+                  "Crie ou acesse sua conta na plataforma utilizando e-mail ou senha.",
+                  style: GoogleFonts.workSans(textStyle: const TextStyle(
+                      color: Color(0xFFB2B2B2),
+                      fontSize: 14.0,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.w400,
+                      letterSpacing: 1.5),
                   ),
                 ),
-                SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
@@ -92,10 +78,10 @@ class _PaginaDeLoginState extends State<PaginaDeLogin> {
                     Text(
                       "Não possuo uma conta",
                       style: GoogleFonts.workSans(
-                          textStyle: TextStyle(
-                              color: Color(0xFFB2B2B2),
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16)),
+                          textStyle:const TextStyle(
+                          color: Color(0xFFB2B2B2),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16)),
                     ),
                   ],
                 ),
@@ -104,15 +90,12 @@ class _PaginaDeLoginState extends State<PaginaDeLogin> {
                   children: [
                     Text(
                       "E-mail",
-                      style: GoogleFonts.workSans(
-                          textStyle: TextStyle(
-                              color: Color(0xFFB2B2B2),
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16)),
+                      style: GoogleFonts.workSans(textStyle: const TextStyle(
+                          color: Color(0xFFB2B2B2),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16)),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
+                    const SizedBox(height: 10),
                     TextFormField(
                       autofocus: true,
                       controller: emailController,
@@ -128,7 +111,7 @@ class _PaginaDeLoginState extends State<PaginaDeLogin> {
                         labelStyle: TextStyle(color: Colors.white),
                       ),
                     ),
-                    SizedBox(height: 20.0), // Espaçamento entre os campos
+                    SizedBox(height: 20.0), 
                     Text(
                       "Senha",
                       style: GoogleFonts.workSans(
@@ -156,7 +139,7 @@ class _PaginaDeLoginState extends State<PaginaDeLogin> {
                         
                       ),
                     ),
-                    SizedBox(height: 20.0), // Espaçamento entre os campos
+                    SizedBox(height: 20.0), 
                     if (campoConfirmarSenhaVisivel)
                       Text(
                         "Confirme a senha",

@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
         textTheme: GoogleFonts.workSansTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
-      home: MetodosLogin(),
+      home: SplashScreen(),
     );
   }
 }
