@@ -1,3 +1,4 @@
+import 'package:fitz/screens/login.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,7 +22,6 @@ class _MetodosLoginState extends State<MetodosLogin> {
       'method': 'google',
       'color': Color(0xFFDAFC34),
     },
-
     {
       'text': 'Entrar com a Apple',
       'method': 'apple',
@@ -45,7 +45,7 @@ class _MetodosLoginState extends State<MetodosLogin> {
       case 'email':
         return Icons.mail;
       default:
-        return Icons.error; 
+        return Icons.error;
     }
   }
 
@@ -130,7 +130,7 @@ class _MetodosLoginState extends State<MetodosLogin> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              textAlign: TextAlign.center, 
+              textAlign: TextAlign.center,
             ),
           ),
           Center(
@@ -147,7 +147,13 @@ class _MetodosLoginState extends State<MetodosLogin> {
                           width: double.infinity,
                           child: ElevatedButton.icon(
                             onPressed: () {
-                              
+                              if (data['method'] == 'email') {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (context) => PaginaDeLogin(),
+                                  ),
+                                );
+                              }
                             },
                             icon: Icon(
                               iconesParaOsBotoes(data['method']),
@@ -198,13 +204,10 @@ class _MetodosLoginState extends State<MetodosLogin> {
                   TextSpan(
                     text: "Termos de Uso e Privacidade.",
                     style: TextStyle(
-                     color: Color(0xFF787878),
-                      decoration: TextDecoration.underline, 
+                      color: Color(0xFF787878),
+                      decoration: TextDecoration.underline,
                     ),
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () {
-                        
-                      },
+                    recognizer: TapGestureRecognizer()..onTap = () {},
                   ),
                 ],
               ),

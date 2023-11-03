@@ -153,6 +153,7 @@ class _PaginaDeLoginState extends State<PaginaDeLogin> {
                           borderRadius: BorderRadius.circular(30.0),
                           borderSide: BorderSide.none,
                         ),
+                        
                       ),
                     ),
                     SizedBox(height: 20.0), // Espaçamento entre os campos
@@ -182,6 +183,7 @@ class _PaginaDeLoginState extends State<PaginaDeLogin> {
                             borderRadius: BorderRadius.circular(30.0),
                             borderSide: BorderSide.none,
                           ),
+            
                         ),
                       ),
                   ],
@@ -202,8 +204,7 @@ class _PaginaDeLoginState extends State<PaginaDeLogin> {
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all<Color>(Color(0xFFC7E52F)),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
                           ),
@@ -221,37 +222,47 @@ class _PaginaDeLoginState extends State<PaginaDeLogin> {
                       ),
                     ),
                   ),
+                  
                 ),
                 SizedBox(
-                  height: 82,
+                  height: 26,
                 ),
-                RichText(
-                  textAlign: TextAlign.center,
-                  text: TextSpan(
-                    style: GoogleFonts.workSans(
-                      textStyle: TextStyle(
-                        color: Color(0xFF787878),
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                      ),
+                 Positioned(
+                  bottom: 0, 
+            left: 0,   
+            right: 0,
+                   child: RichText(
+                               textAlign: TextAlign.center,
+                               text: TextSpan(
+                                 style: GoogleFonts.workSans(
+                    textStyle: TextStyle(
+                      color: Color(0xFF787878),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      fontStyle: FontStyle.normal,
                     ),
-                    children: <TextSpan>[
-                      TextSpan(
-                        text:
-                            "Ao criar uma conta no aplicativo, você concorda com nossos ",
+                                 ),
+                                 children: <TextSpan>[
+                    TextSpan(
+                      text:
+                          "Ao criar uma conta no aplicativo, você concorda com nossos ",
+                    ),
+                    TextSpan(
+                      text: "Termos de Uso e Privacidade.",
+                      style: TextStyle(
+                       color: Color(0xFF787878),
+                        decoration: TextDecoration.underline, 
                       ),
-                      TextSpan(
-                        text: "Termos de Uso e Privacidade.",
-                        style: TextStyle(
-                          color: Color(0xFF787878),
-                          decoration: TextDecoration.underline,
-                        ),
-                        recognizer: TapGestureRecognizer()..onTap = () {},
-                      ),
-                    ],
-                  ),
-                ),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          
+                        },
+                    ),
+                                 ],
+                               ),
+                             ),
+                 ),
+          
               ],
             ),
           ),

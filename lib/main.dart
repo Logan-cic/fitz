@@ -1,4 +1,5 @@
 import 'package:fitz/screens/login.dart';
+import 'package:fitz/screens/metodos_login.dart';
 import 'package:fitz/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,7 +23,7 @@ class _MyAppState extends State<MyApp> {
         textTheme: GoogleFonts.workSansTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
-      home: PaginaDeLogin(),
+      home: MetodosLogin(),
     );
   }
 }
