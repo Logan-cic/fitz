@@ -126,7 +126,7 @@ class _MetodosLoginState extends State<MetodosLogin> {
               style: GoogleFonts.workSans(
                 textStyle: TextStyle(
                   color: Colors.white,
-                  fontSize: 24,
+                  fontSize: 20,
                   fontWeight: FontWeight.w500,
                 ),
               ),
